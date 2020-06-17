@@ -12,12 +12,19 @@ class LandingPage extends MainPage {
     get loginDfa()              { return $("//button[contains(text(),' Войти ')]")}
 
     login(options){
+        this.loginInput.waitForDisplayed()
         this.loginInput.setValue(options.name)
+
+        this.passwordInput.waitForDisplayed()
         this.passwordInput.setValue(options.password)
-        browser.pause(1000)
+
+        this.loginButton.waitForDisplayed()
         this.loginButton.click()
-        browser.pause(1000)
+
+        this.authDfa.waitForDisplayed()
         this.authDfa.setValue(options.param)
+
+        this.loginDfa.waitForDisplayed()
         this.loginDfa.click()
     }
     
