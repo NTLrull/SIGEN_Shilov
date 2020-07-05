@@ -1,4 +1,4 @@
-const MainPage = require("../pageobjects/main.page")
+const MainPage = require("./main.page")
 
 class LandingPage extends MainPage {
     //пропишем класс дашборда 
